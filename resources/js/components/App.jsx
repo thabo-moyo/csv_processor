@@ -155,9 +155,6 @@ function App() {
                                             <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                                                 {person.last_name || '-'}
                                             </td>
-                                            <td className="px-6 py-4 text-sm text-gray-500">
-                                                {person.original_name || '-'}
-                                            </td>
                                         </tr>
                                     ))}
                                 </tbody>
