@@ -4,6 +4,7 @@ namespace App\Services\PersonParser;
 
 use Exception;
 use Illuminate\Support\Collection;
+use App\Models\Person;
 
 
 readonly class HomeownerCsvProcessor
@@ -26,6 +27,9 @@ readonly class HomeownerCsvProcessor
                 continue;
             }
         }
+
+
+        Person::Upsert($processedLines, ['title', 'first_name', 'initial', 'last_name']);
         return $processedLines;
     }
 
