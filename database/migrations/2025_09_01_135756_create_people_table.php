@@ -13,11 +13,14 @@ return new class extends Migration
     {
         Schema::create('people', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
+            $table->string('title')->nullable();
             $table->string('first_name')->nullable();
-            $table->string('inital')->nullable();
-            $table->string('last_name');
+            $table->string('initial')->nullable();
+            $table->string('last_name')->nullable();
             $table->timestamps();
+            
+            // Add unique constraint for upsert
+            $table->unique(['title', 'first_name', 'initial', 'last_name']);
         });
     }
 
