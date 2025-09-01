@@ -1,6 +1,6 @@
 <?php
 
-namespace app\Services\PersonParser\Fields;
+namespace App\Services\PersonParser\Fields;
 
 use Illuminate\Support\Str;
 

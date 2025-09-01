@@ -1,8 +1,8 @@
 <?php
 
-namespace app\Services\PersonParser\Fields;
+namespace App\Services\PersonParser\Fields;
 
-use app\Services\PersonParser\FieldInterface;
+use App\Services\PersonParser\FieldInterface;
 use Illuminate\Support\Str;
 use InvalidArgumentException;
 
