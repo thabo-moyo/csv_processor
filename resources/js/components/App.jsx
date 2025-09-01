@@ -58,7 +58,7 @@ function App() {
         <div className="min-h-screen bg-gray-100">
             <div className="container mx-auto py-8 px-4">
                 <h1 className="text-4xl font-bold text-center text-gray-800 mb-8">
-                    CSV Person Parser
+                    Homeowner CSV Processor
                 </h1>
 
                 <div className="bg-white rounded-lg shadow-md p-6 max-w-2xl mx-auto mb-8">
