@@ -8,7 +8,7 @@ class Conjunction extends AbstractField
 {
     public static function canAccept(string $token): bool
     {
-        return in_array(Str::lower($token), ['and']);
+        return in_array(Str::lower($token), ['and', '&']);
     }
 
 }
