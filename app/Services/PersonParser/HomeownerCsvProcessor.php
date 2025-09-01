@@ -17,6 +17,7 @@ readonly class HomeownerCsvProcessor
         $lines = $this->parseLines($content);
 
         $processedLines = [];
+        $countBefore = Person::count();
 
         foreach ($lines as  $line) {
             try {
@@ -28,9 +29,17 @@ readonly class HomeownerCsvProcessor
             }
         }
 
-
         Person::Upsert($processedLines, ['title', 'first_name', 'initial', 'last_name']);
-        return $processedLines;
+        
+        $countAfter = Person::count();
+        $newCount = $countAfter - $countBefore;
+        
+        return [
+            'persons' => $processedLines,
+            'total_processed' => count($processedLines),
+            'new_added' => $newCount,
+            'duplicates' => count($processedLines) - $newCount
+        ];
     }
 
     /**

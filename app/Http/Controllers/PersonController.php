@@ -27,12 +27,10 @@ class PersonController extends Controller
 
         $content = file_get_contents($file->getRealPath());
 
-        $persons = $this->csvProcessor->processContent($content);
+        $result = $this->csvProcessor->processContent($content);
 
         return response()->json([
-        'data' => [
-            'persons' => $persons,
-        ]
+            'data' => $result
         ]);
     }
 }
