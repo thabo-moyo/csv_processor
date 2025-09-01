@@ -9,8 +9,8 @@ class PersonController extends Controller
 {
     public function index()
         {
-            //Basic response for now - would add pagination
-            $persons = Person::paginate(10);
+            //Basic response for now
+            $persons = Person::paginate(100);
             return response()->json($persons);
         }
 }
