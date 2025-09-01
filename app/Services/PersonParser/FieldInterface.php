@@ -1,6 +1,6 @@
 <?php
 
-namespace app\Services\PersonParser;
+namespace App\Services\PersonParser;
 
 interface FieldInterface
 {

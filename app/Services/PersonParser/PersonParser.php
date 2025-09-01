@@ -1,12 +1,12 @@
 <?php
 
-namespace app\Services\PersonParser;
+namespace App\Services\PersonParser;
 
-use app\Services\PersonParser\Fields\Conjunction;
-use app\Services\PersonParser\Fields\FirstName;
-use app\Services\PersonParser\Fields\Initial;
-use app\Services\PersonParser\Fields\LastName;
-use app\Services\PersonParser\Fields\Title;
+use App\Services\PersonParser\Fields\Conjunction;
+use App\Services\PersonParser\Fields\FirstName;
+use App\Services\PersonParser\Fields\Initial;
+use App\Services\PersonParser\Fields\LastName;
+use App\Services\PersonParser\Fields\Title;
 use Exception;
 use Illuminate\Support\Collection;
 
@@ -26,8 +26,9 @@ class PersonParser
     }
 
     /**
+     * @param string $input
+     * @return Person[]
      * @throws Exception
-     * @return 
      */
     public function parse(string $input): array
     {

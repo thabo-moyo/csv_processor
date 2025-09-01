@@ -1,11 +1,11 @@
 <?php
 
-namespace app\Services\PersonParser;
+namespace App\Services\PersonParser;
 
-use app\Services\PersonParser\Fields\FirstName;
-use app\Services\PersonParser\Fields\Initial;
-use app\Services\PersonParser\Fields\LastName;
-use app\Services\PersonParser\Fields\Title;
+use App\Services\PersonParser\Fields\FirstName;
+use App\Services\PersonParser\Fields\Initial;
+use App\Services\PersonParser\Fields\LastName;
+use App\Services\PersonParser\Fields\Title;
 
 readonly class Person
 {
