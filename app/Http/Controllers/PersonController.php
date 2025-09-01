@@ -20,7 +20,7 @@ class PersonController extends Controller
     public function processCsv(Request $request): JsonResponse
     {
         $request->validate([
-            'file' => 'required|file|mimes:csv'
+            'file' => 'required|file|mimes:csv,txt'
         ]);
 
         $file = $request->file('file');
