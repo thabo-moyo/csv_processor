@@ -6,9 +6,6 @@ use app\Services\PersonParser\FieldInterface;
 use Illuminate\Support\Str;
 use InvalidArgumentException;
 
-/**
- * Field classes to work out the csv structure and granula conditions
- */
 abstract class AbstractField implements FieldInterface
 {
     protected string $value;
