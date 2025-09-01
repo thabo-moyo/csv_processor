@@ -17,12 +17,21 @@ readonly class HomeownerCsvProcessor
 
         $processedLines = [];
 
-
+        foreach ($lines as  $line) {
+            try {
+                $result = $this->processLine($line);
+                $personsAsArrays = array_map(fn($person) => $person->toArray(), $result);
+                $processedLines = array_merge($processedLines, $personsAsArrays);
+            } catch (\Exception $e) {
+                continue;
+            }
+        }
         return $processedLines;
     }
 
     /**
      * @throws Exception
+     * @return Person[]
      */
     public function processLine(string $line): array
     {
