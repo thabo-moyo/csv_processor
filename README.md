@@ -2,7 +2,7 @@
 ## Setup
 
 ```bash
-php, composer and npm to be pre-installed
+php, mysql, composer and npm to be pre-installed
 
 composer install
 npm install
